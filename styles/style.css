@@ -8,6 +8,7 @@ body{
     font-family: 'Montserrat', sans-serif;
 }
 
+/* layouts */
 .hero {
     height: 95vh;
     background: linear-gradient(90deg, rgb(25 135 84 / 80%) 0%, rgb(25 135 84 / 80%) 100%) ,url(../images/laptop-eyeglass.jpg);
@@ -25,39 +26,51 @@ body{
     text-align: center;
 }
 .hero__text-main{
-    font-size: 7rem;
+    /* font-size: 6rem; */
     color: #fff;
+    display: block;
 }
 .hero__text-sub {
-    font-size: 4rem;
+    /* font-size: 4rem; */
     color: #fff;
+    font-weight: 300;
+    letter-spacing:20px;
+    display: block;
 }
 
-.btn:hover{
+/* components */
+.btn-animation{
+    position: relative;
+}
+.btn-animation:hover{
     transform: translateY(-0.4rem);
     box-shadow: 0 1.6rem 3.2rem rgba($color-black, 0.3);
 }
-.btn:hover::after{
+.btn-animation:hover::after{
     transform: scaleX(1.4) scaleY(1.6);
     opacity: 0;
 }
-.btn:active{
+.btn-animation:active{
     transform: translateY(-0.1rem);
     box-shadow: 0 0.8rem 1.6rem rgba($color-black, 0.3);
 }
-.btn::after {
+.btn-animation::after {
     content: "";
     height: 100%;
     width: 100%;
-    border-radius: 10rem;
+    border-radius: var(--bs-border-radius);
     display: inline-block;
-    position: absolute;
+    position: absolute; 
     top: 0;
     left: 0;
-    z-index: -1;
+    z-index: -1; 
     transition: all 300ms;
 }
 
 .btn-white{
     color: #333;
+    background-color: #fff;
+}
+.btn-white::after{
+    background-color: #fff;
 }
