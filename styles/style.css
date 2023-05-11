@@ -1,21 +1,21 @@
-/* color palette
-
-color-primary #198754
-color-primary-light #30d88a
-
-color-gray #333
-color-gray-light #f8f8f8
-
-*/
-
 /* base */
+:root{
+    --color-primary: #198754;
+    --color-primary-light: #30d88a;
+
+    --color-gray: #333;
+    --color-gray-dark: #212529;
+    --color-gray-light: #f8f8f8;
+
+    --color-white:#fff;
+}
 *{
     margin: 0;
     padding: 0;
 }
 body{
     box-sizing: border-box;
-    color: #333;
+    color: var(--color-gray);
     font-family: 'Montserrat', sans-serif;
 }
 
@@ -37,26 +37,26 @@ body{
     text-align: center;
 }
 .hero__text-main{
-    color: #fff;
+    color: var(--color-white);
     display: block;
     letter-spacing: 5px;
 }
 .hero__text-sub {
-    color: #fff;
+    color: var(--color-white);
     font-weight: 300;
     letter-spacing:16px;
     display: block;
 }
 
 .section-project {
-    background-color: #f8f8f8;
+    background-color: var(--color-gray-light);
     margin-top: -20vh;
-    padding-top: 30vh;
+    padding: 30vh 0;
 }
 
 .project__heading-secondary {
-    background: #30D88A;
-    background: linear-gradient(to right, #30D88A 0%, #198754 100%);
+    background: var(--color-primary-light);
+    background: linear-gradient(to right, var(--color-primary-light) 0%, var(--color-primary) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     transition: all 200ms;
@@ -67,7 +67,7 @@ body{
 }
 
 .footer {
-    background-color: #212529;
+    background-color: var(--color-gray-dark);
 }
 .footer__logo-box {
     display: flex;
@@ -107,10 +107,53 @@ body{
 }
 
 .btn-white{
-    color: #333;
-    background-color: #fff;
+    color: var(--color-gray);
+    background-color: var(--color-white);
 }
 .btn-white::after{
-    background-color: #fff;
+    background-color: var(--color-white);
+}
+.btn-green{
+    color: var(--color-primary);
+    background-color: transparent;
+}
+.btn-green::after{
+    background-color: var(--color-primary);
 }
 
+.composition{
+    position: relative;
+}
+.composition:hover .composition__photo:not(:hover){
+    transform: scale(.9);
+}
+.composition__photo{
+    width: 55%;
+    box-shadow: 0 1rem 3rem rgb(0 0 0 / 30%);
+    position: absolute;
+    transition: all 200ms;
+    outline-offset: 1rem;
+}
+.composition__photo:hover{
+    transform: scale(1.05);
+    box-shadow: 0 2rem 4rem rgb(0 0 0 / 50%);
+    z-index: 1;
+    outline: 1rem solid var(--color-primary-light);
+}
+
+.composition__photo--p1 {
+    left: 0;
+    top: -0;
+}
+.composition__photo--p2 {
+    right: 0;
+    top: 4rem;
+}
+.composition__photo--p3 {
+    left: 20%;
+    top: 10rem;
+}
+
+@media max-width(767px) {
+    
+}
