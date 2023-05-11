@@ -1,3 +1,10 @@
+/* color palette
+
+color-primary #198754
+color-light #30d88a
+
+*/
+
 /* base */
 *{
     margin: 0;
@@ -30,14 +37,27 @@ body{
     /* font-size: 6rem; */
     color: #fff;
     display: block;
-    letter-spacing: 10px;
+    letter-spacing: 5px;
 }
 .hero__text-sub {
     /* font-size: 4rem; */
     color: #fff;
     font-weight: 300;
-    letter-spacing:15px;
+    letter-spacing:16px;
     display: block;
+}
+
+.section-project {
+    background-color: #f8f8f8;
+    margin-top: -20vh;
+    padding-top: 30vh;
+}
+
+.project__heading-two {
+    background: #30D88A;
+    background: linear-gradient(to right, #30D88A 0%, #198754 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .footer {
