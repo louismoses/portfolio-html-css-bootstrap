@@ -1,7 +1,10 @@
 /* color palette
 
 color-primary #198754
-color-light #30d88a
+color-primary-light #30d88a
+
+color-gray #333
+color-gray-light #f8f8f8
 
 */
 
@@ -34,13 +37,11 @@ body{
     text-align: center;
 }
 .hero__text-main{
-    /* font-size: 6rem; */
     color: #fff;
     display: block;
     letter-spacing: 5px;
 }
 .hero__text-sub {
-    /* font-size: 4rem; */
     color: #fff;
     font-weight: 300;
     letter-spacing:16px;
@@ -53,11 +54,16 @@ body{
     padding-top: 30vh;
 }
 
-.project__heading-two {
+.project__heading-secondary {
     background: #30D88A;
     background: linear-gradient(to right, #30D88A 0%, #198754 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    transition: all 200ms;
+}
+.project__heading-secondary:hover{
+    transform: skewY(1deg) skewX(1deg);
+    text-shadow: .5rem .5rem 5rem rgba(0, 0, 0, .5);
 }
 
 .footer {
